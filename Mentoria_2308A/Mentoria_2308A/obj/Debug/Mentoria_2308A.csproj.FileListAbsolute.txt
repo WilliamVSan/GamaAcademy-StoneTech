@@ -1,0 +1,8 @@
+C:\Users\mestr\source\repos\Mentoria_2308A\Mentoria_2308A\bin\Debug\Mentoria_2308A.exe.config
+C:\Users\mestr\source\repos\Mentoria_2308A\Mentoria_2308A\bin\Debug\Mentoria_2308A.exe
+C:\Users\mestr\source\repos\Mentoria_2308A\Mentoria_2308A\bin\Debug\Mentoria_2308A.pdb
+C:\Users\mestr\source\repos\Mentoria_2308A\Mentoria_2308A\obj\Debug\Mentoria_2308A.csproj.AssemblyReference.cache
+C:\Users\mestr\source\repos\Mentoria_2308A\Mentoria_2308A\obj\Debug\Mentoria_2308A.csproj.SuggestedBindingRedirects.cache
+C:\Users\mestr\source\repos\Mentoria_2308A\Mentoria_2308A\obj\Debug\Mentoria_2308A.csproj.CoreCompileInputs.cache
+C:\Users\mestr\source\repos\Mentoria_2308A\Mentoria_2308A\obj\Debug\Mentoria_2308A.exe
+C:\Users\mestr\source\repos\Mentoria_2308A\Mentoria_2308A\obj\Debug\Mentoria_2308A.pdb
