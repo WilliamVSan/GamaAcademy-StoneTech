@@ -1,0 +1,26 @@
+C:\Users\mestr\Downloads\Gama Academy\GIT\Exemplo CLI\bin\Debug\net6.0\appsettings.Development.json
+C:\Users\mestr\Downloads\Gama Academy\GIT\Exemplo CLI\bin\Debug\net6.0\appsettings.json
+C:\Users\mestr\Downloads\Gama Academy\GIT\Exemplo CLI\bin\Debug\net6.0\Exemplo CLI.staticwebassets.runtime.json
+C:\Users\mestr\Downloads\Gama Academy\GIT\Exemplo CLI\bin\Debug\net6.0\Exemplo CLI.exe
+C:\Users\mestr\Downloads\Gama Academy\GIT\Exemplo CLI\bin\Debug\net6.0\Exemplo CLI.deps.json
+C:\Users\mestr\Downloads\Gama Academy\GIT\Exemplo CLI\bin\Debug\net6.0\Exemplo CLI.runtimeconfig.json
+C:\Users\mestr\Downloads\Gama Academy\GIT\Exemplo CLI\bin\Debug\net6.0\Exemplo CLI.dll
+C:\Users\mestr\Downloads\Gama Academy\GIT\Exemplo CLI\bin\Debug\net6.0\Exemplo CLI.pdb
+C:\Users\mestr\Downloads\Gama Academy\GIT\Exemplo CLI\obj\Debug\net6.0\Exemplo CLI.csproj.AssemblyReference.cache
+C:\Users\mestr\Downloads\Gama Academy\GIT\Exemplo CLI\obj\Debug\net6.0\Exemplo CLI.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\mestr\Downloads\Gama Academy\GIT\Exemplo CLI\obj\Debug\net6.0\Exemplo CLI.AssemblyInfoInputs.cache
+C:\Users\mestr\Downloads\Gama Academy\GIT\Exemplo CLI\obj\Debug\net6.0\Exemplo CLI.AssemblyInfo.cs
+C:\Users\mestr\Downloads\Gama Academy\GIT\Exemplo CLI\obj\Debug\net6.0\Exemplo CLI.csproj.CoreCompileInputs.cache
+C:\Users\mestr\Downloads\Gama Academy\GIT\Exemplo CLI\obj\Debug\net6.0\Exemplo CLI.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\mestr\Downloads\Gama Academy\GIT\Exemplo CLI\obj\Debug\net6.0\Exemplo CLI.RazorAssemblyInfo.cache
+C:\Users\mestr\Downloads\Gama Academy\GIT\Exemplo CLI\obj\Debug\net6.0\Exemplo CLI.RazorAssemblyInfo.cs
+C:\Users\mestr\Downloads\Gama Academy\GIT\Exemplo CLI\obj\Debug\net6.0\staticwebassets.build.json
+C:\Users\mestr\Downloads\Gama Academy\GIT\Exemplo CLI\obj\Debug\net6.0\staticwebassets.development.json
+C:\Users\mestr\Downloads\Gama Academy\GIT\Exemplo CLI\obj\Debug\net6.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+C:\Users\mestr\Downloads\Gama Academy\GIT\Exemplo CLI\obj\Debug\net6.0\scopedcss\bundle\Exemplo CLI.styles.css
+C:\Users\mestr\Downloads\Gama Academy\GIT\Exemplo CLI\obj\Debug\net6.0\scopedcss\projectbundle\Exemplo CLI.bundle.scp.css
+C:\Users\mestr\Downloads\Gama Academy\GIT\Exemplo CLI\obj\Debug\net6.0\Exemplo CLI.dll
+C:\Users\mestr\Downloads\Gama Academy\GIT\Exemplo CLI\obj\Debug\net6.0\refint\Exemplo CLI.dll
+C:\Users\mestr\Downloads\Gama Academy\GIT\Exemplo CLI\obj\Debug\net6.0\Exemplo CLI.pdb
+C:\Users\mestr\Downloads\Gama Academy\GIT\Exemplo CLI\obj\Debug\net6.0\Exemplo CLI.genruntimeconfig.cache
+C:\Users\mestr\Downloads\Gama Academy\GIT\Exemplo CLI\obj\Debug\net6.0\ref\Exemplo CLI.dll
