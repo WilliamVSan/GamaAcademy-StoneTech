@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32819.101
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DBFirstDemo", "DBFirstDemo\DBFirstDemo.csproj", "{C3E5C637-F530-4AB2-BF78-32C44BFC9696}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Itens de Solução", "Itens de Solução", "{3C15EDBE-B77B-4633-AE4C-91084E3DAE3A}"
+	ProjectSection(SolutionItems) = preProject
+		Loja.sql = Loja.sql
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeFirstDemo", "CodeFirstDemo\CodeFirstDemo.csproj", "{63455411-828A-4B83-9571-947500F437CF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C3E5C637-F530-4AB2-BF78-32C44BFC9696}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C3E5C637-F530-4AB2-BF78-32C44BFC9696}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C3E5C637-F530-4AB2-BF78-32C44BFC9696}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C3E5C637-F530-4AB2-BF78-32C44BFC9696}.Release|Any CPU.Build.0 = Release|Any CPU
+		{63455411-828A-4B83-9571-947500F437CF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{63455411-828A-4B83-9571-947500F437CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{63455411-828A-4B83-9571-947500F437CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{63455411-828A-4B83-9571-947500F437CF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2F7EE2BB-9055-4EBE-9507-22403FFDC3DF}
+	EndGlobalSection
+EndGlobal

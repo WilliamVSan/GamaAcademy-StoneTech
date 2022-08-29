@@ -1,0 +1,11 @@
+C:\Users\mestr\Downloads\Gama Academy\GamaAcademy-StoneTech\DBFirstDemo\CodeFirstDemo\bin\Debug\CodeFirstDemo.exe.config
+C:\Users\mestr\Downloads\Gama Academy\GamaAcademy-StoneTech\DBFirstDemo\CodeFirstDemo\bin\Debug\CodeFirstDemo.exe
+C:\Users\mestr\Downloads\Gama Academy\GamaAcademy-StoneTech\DBFirstDemo\CodeFirstDemo\bin\Debug\CodeFirstDemo.pdb
+C:\Users\mestr\Downloads\Gama Academy\GamaAcademy-StoneTech\DBFirstDemo\CodeFirstDemo\bin\Debug\EntityFramework.dll
+C:\Users\mestr\Downloads\Gama Academy\GamaAcademy-StoneTech\DBFirstDemo\CodeFirstDemo\bin\Debug\EntityFramework.xml
+C:\Users\mestr\Downloads\Gama Academy\GamaAcademy-StoneTech\DBFirstDemo\CodeFirstDemo\obj\Debug\CodeFirstDemo.csproj.AssemblyReference.cache
+C:\Users\mestr\Downloads\Gama Academy\GamaAcademy-StoneTech\DBFirstDemo\CodeFirstDemo\obj\Debug\CodeFirstDemo.csproj.SuggestedBindingRedirects.cache
+C:\Users\mestr\Downloads\Gama Academy\GamaAcademy-StoneTech\DBFirstDemo\CodeFirstDemo\obj\Debug\CodeFirstDemo.csproj.CoreCompileInputs.cache
+C:\Users\mestr\Downloads\Gama Academy\GamaAcademy-StoneTech\DBFirstDemo\CodeFirstDemo\obj\Debug\CodeFirstDemo.csproj.CopyComplete
+C:\Users\mestr\Downloads\Gama Academy\GamaAcademy-StoneTech\DBFirstDemo\CodeFirstDemo\obj\Debug\CodeFirstDemo.exe
+C:\Users\mestr\Downloads\Gama Academy\GamaAcademy-StoneTech\DBFirstDemo\CodeFirstDemo\obj\Debug\CodeFirstDemo.pdb
