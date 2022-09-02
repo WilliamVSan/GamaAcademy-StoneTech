@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "mx83AuGQQt1LC1Wr0DFvf7O/E51B9/bdQg4IJ+5RVHxDJdtBvD5j9Kf+wLoTKL1ZBJTR/wNf5csFswbrFjJ2sw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\mestr\\Downloads\\Gama Academy\\GamaAcademy-StoneTech\\solucao\\Client\\Client.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\mestr\\.nuget\\packages\\identitymodel\\3.10.10\\identitymodel.3.10.10.nupkg.sha512",
+    "C:\\Users\\mestr\\.nuget\\packages\\newtonsoft.json\\11.0.1\\newtonsoft.json.11.0.1.nupkg.sha512",
+    "C:\\Users\\mestr\\.nuget\\packages\\system.text.encodings.web\\4.5.0\\system.text.encodings.web.4.5.0.nupkg.sha512"
+  ],
+  "logs": []
+}
