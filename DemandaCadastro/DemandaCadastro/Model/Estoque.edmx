@@ -1,0 +1,283 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="EstoqueModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Categoria">
+          <Key>
+            <PropertyRef Name="CategoriaId" />
+          </Key>
+          <Property Name="CategoriaId" Type="int" Nullable="false" />
+          <Property Name="NomeCategoria" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Descricao" Type="varchar" MaxLength="70" />
+          <Property Name="Tipo" Type="varchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Compra">
+          <Key>
+            <PropertyRef Name="CompraId" />
+          </Key>
+          <Property Name="CompraId" Type="int" Nullable="false" />
+          <Property Name="NomeCompra" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="PrecoCompra" Type="float" Nullable="false" />
+          <Property Name="ProdutoId" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Produto">
+          <Key>
+            <PropertyRef Name="ProdutoId" />
+          </Key>
+          <Property Name="ProdutoId" Type="int" Nullable="false" />
+          <Property Name="NomeProduto" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Quantidade" Type="int" />
+          <Property Name="Armazenagem" Type="varchar" MaxLength="50" />
+          <Property Name="PrecoCompra" Type="float" Nullable="false" />
+          <Property Name="PrecoVenda" Type="float" Nullable="false" />
+          <Property Name="PercaLucro" Type="float" Nullable="false" />
+          <Property Name="Status" Type="bit" Nullable="false" />
+          <Property Name="CategoriaId" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Venda">
+          <Key>
+            <PropertyRef Name="VendaId" />
+          </Key>
+          <Property Name="VendaId" Type="int" Nullable="false" />
+          <Property Name="NomeVenda" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="PrecoVenda" Type="float" Nullable="false" />
+          <Property Name="ProdutoId" Type="int" Nullable="false" />
+        </EntityType>
+        <Association Name="FK__Compra__ProdutoI__2B3F6F97">
+          <End Role="Produto" Type="Self.Produto" Multiplicity="1" />
+          <End Role="Compra" Type="Self.Compra" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Produto">
+              <PropertyRef Name="ProdutoId" />
+            </Principal>
+            <Dependent Role="Compra">
+              <PropertyRef Name="ProdutoId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Produto__Categor__267ABA7A">
+          <End Role="Categoria" Type="Self.Categoria" Multiplicity="1" />
+          <End Role="Produto" Type="Self.Produto" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Categoria">
+              <PropertyRef Name="CategoriaId" />
+            </Principal>
+            <Dependent Role="Produto">
+              <PropertyRef Name="CategoriaId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Venda__ProdutoId__2C3393D0">
+          <End Role="Produto" Type="Self.Produto" Multiplicity="1" />
+          <End Role="Venda" Type="Self.Venda" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Produto">
+              <PropertyRef Name="ProdutoId" />
+            </Principal>
+            <Dependent Role="Venda">
+              <PropertyRef Name="ProdutoId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="EstoqueModelStoreContainer">
+          <EntitySet Name="Categoria" EntityType="Self.Categoria" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Compra" EntityType="Self.Compra" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Produto" EntityType="Self.Produto" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Venda" EntityType="Self.Venda" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK__Compra__ProdutoI__2B3F6F97" Association="Self.FK__Compra__ProdutoI__2B3F6F97">
+            <End Role="Produto" EntitySet="Produto" />
+            <End Role="Compra" EntitySet="Compra" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Produto__Categor__267ABA7A" Association="Self.FK__Produto__Categor__267ABA7A">
+            <End Role="Categoria" EntitySet="Categoria" />
+            <End Role="Produto" EntitySet="Produto" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Venda__ProdutoId__2C3393D0" Association="Self.FK__Venda__ProdutoId__2C3393D0">
+            <End Role="Produto" EntitySet="Produto" />
+            <End Role="Venda" EntitySet="Venda" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="EstoqueModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Categoria">
+          <Key>
+            <PropertyRef Name="CategoriaId" />
+          </Key>
+          <Property Name="CategoriaId" Type="Int32" Nullable="false" />
+          <Property Name="NomeCategoria" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Descricao" Type="String" MaxLength="70" FixedLength="false" Unicode="false" />
+          <Property Name="Tipo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="Produtoes" Relationship="Self.FK__Produto__Categor__267ABA7A" FromRole="Categoria" ToRole="Produto" />
+        </EntityType>
+        <EntityType Name="Compra">
+          <Key>
+            <PropertyRef Name="CompraId" />
+          </Key>
+          <Property Name="CompraId" Type="Int32" Nullable="false" />
+          <Property Name="NomeCompra" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="PrecoCompra" Type="Double" Nullable="false" />
+          <Property Name="ProdutoId" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Produto" Relationship="Self.FK__Compra__ProdutoI__2B3F6F97" FromRole="Compra" ToRole="Produto" />
+        </EntityType>
+        <EntityType Name="Produto">
+          <Key>
+            <PropertyRef Name="ProdutoId" />
+          </Key>
+          <Property Name="ProdutoId" Type="Int32" Nullable="false" />
+          <Property Name="NomeProduto" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Quantidade" Type="Int32" />
+          <Property Name="Armazenagem" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="PrecoCompra" Type="Double" Nullable="false" />
+          <Property Name="PrecoVenda" Type="Double" Nullable="false" />
+          <Property Name="PercaLucro" Type="Double" Nullable="false" />
+          <Property Name="Status" Type="Boolean" Nullable="false" />
+          <Property Name="CategoriaId" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Categoria" Relationship="Self.FK__Produto__Categor__267ABA7A" FromRole="Produto" ToRole="Categoria" />
+          <NavigationProperty Name="Compras" Relationship="Self.FK__Compra__ProdutoI__2B3F6F97" FromRole="Produto" ToRole="Compra" />
+          <NavigationProperty Name="Vendas" Relationship="Self.FK__Venda__ProdutoId__2C3393D0" FromRole="Produto" ToRole="Venda" />
+        </EntityType>
+        <EntityType Name="Venda">
+          <Key>
+            <PropertyRef Name="VendaId" />
+          </Key>
+          <Property Name="VendaId" Type="Int32" Nullable="false" />
+          <Property Name="NomeVenda" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="PrecoVenda" Type="Double" Nullable="false" />
+          <Property Name="ProdutoId" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Produto" Relationship="Self.FK__Venda__ProdutoId__2C3393D0" FromRole="Venda" ToRole="Produto" />
+        </EntityType>
+        <Association Name="FK__Produto__Categor__267ABA7A">
+          <End Role="Categoria" Type="Self.Categoria" Multiplicity="1" />
+          <End Role="Produto" Type="Self.Produto" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Categoria">
+              <PropertyRef Name="CategoriaId" />
+            </Principal>
+            <Dependent Role="Produto">
+              <PropertyRef Name="CategoriaId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Compra__ProdutoI__2B3F6F97">
+          <End Role="Produto" Type="Self.Produto" Multiplicity="1" />
+          <End Role="Compra" Type="Self.Compra" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Produto">
+              <PropertyRef Name="ProdutoId" />
+            </Principal>
+            <Dependent Role="Compra">
+              <PropertyRef Name="ProdutoId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Venda__ProdutoId__2C3393D0">
+          <End Role="Produto" Type="Self.Produto" Multiplicity="1" />
+          <End Role="Venda" Type="Self.Venda" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Produto">
+              <PropertyRef Name="ProdutoId" />
+            </Principal>
+            <Dependent Role="Venda">
+              <PropertyRef Name="ProdutoId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="EstoqueEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Categorias" EntityType="Self.Categoria" />
+          <EntitySet Name="Compras" EntityType="Self.Compra" />
+          <EntitySet Name="Produtoes" EntityType="Self.Produto" />
+          <EntitySet Name="Vendas" EntityType="Self.Venda" />
+          <AssociationSet Name="FK__Produto__Categor__267ABA7A" Association="Self.FK__Produto__Categor__267ABA7A">
+            <End Role="Categoria" EntitySet="Categorias" />
+            <End Role="Produto" EntitySet="Produtoes" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Compra__ProdutoI__2B3F6F97" Association="Self.FK__Compra__ProdutoI__2B3F6F97">
+            <End Role="Produto" EntitySet="Produtoes" />
+            <End Role="Compra" EntitySet="Compras" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Venda__ProdutoId__2C3393D0" Association="Self.FK__Venda__ProdutoId__2C3393D0">
+            <End Role="Produto" EntitySet="Produtoes" />
+            <End Role="Venda" EntitySet="Vendas" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="EstoqueModelStoreContainer" CdmEntityContainer="EstoqueEntities">
+          <EntitySetMapping Name="Categorias">
+            <EntityTypeMapping TypeName="EstoqueModel.Categoria">
+              <MappingFragment StoreEntitySet="Categoria">
+                <ScalarProperty Name="CategoriaId" ColumnName="CategoriaId" />
+                <ScalarProperty Name="NomeCategoria" ColumnName="NomeCategoria" />
+                <ScalarProperty Name="Descricao" ColumnName="Descricao" />
+                <ScalarProperty Name="Tipo" ColumnName="Tipo" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Compras">
+            <EntityTypeMapping TypeName="EstoqueModel.Compra">
+              <MappingFragment StoreEntitySet="Compra">
+                <ScalarProperty Name="CompraId" ColumnName="CompraId" />
+                <ScalarProperty Name="NomeCompra" ColumnName="NomeCompra" />
+                <ScalarProperty Name="PrecoCompra" ColumnName="PrecoCompra" />
+                <ScalarProperty Name="ProdutoId" ColumnName="ProdutoId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Produtoes">
+            <EntityTypeMapping TypeName="EstoqueModel.Produto">
+              <MappingFragment StoreEntitySet="Produto">
+                <ScalarProperty Name="ProdutoId" ColumnName="ProdutoId" />
+                <ScalarProperty Name="NomeProduto" ColumnName="NomeProduto" />
+                <ScalarProperty Name="Quantidade" ColumnName="Quantidade" />
+                <ScalarProperty Name="Armazenagem" ColumnName="Armazenagem" />
+                <ScalarProperty Name="PrecoCompra" ColumnName="PrecoCompra" />
+                <ScalarProperty Name="PrecoVenda" ColumnName="PrecoVenda" />
+                <ScalarProperty Name="PercaLucro" ColumnName="PercaLucro" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="CategoriaId" ColumnName="CategoriaId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Vendas">
+            <EntityTypeMapping TypeName="EstoqueModel.Venda">
+              <MappingFragment StoreEntitySet="Venda">
+                <ScalarProperty Name="VendaId" ColumnName="VendaId" />
+                <ScalarProperty Name="NomeVenda" ColumnName="NomeVenda" />
+                <ScalarProperty Name="PrecoVenda" ColumnName="PrecoVenda" />
+                <ScalarProperty Name="ProdutoId" ColumnName="ProdutoId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
