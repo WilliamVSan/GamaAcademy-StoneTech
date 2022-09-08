@@ -26,13 +26,7 @@ namespace EstoqueProjeto
                     Console.WriteLine($"[{produto.ProdutoId}] Status: Ativo | Nome: {produto.NomeProduto} | Quantidade: {produto.Quantidade} |" +
                                             $" Preço Compra: {produto.PrecoCompra} | Preço Venda: {produto.PrecoVenda} |");
                 };
-            }
-            Console.ForegroundColor = ConsoleColor.Yellow;
-            Console.WriteLine("\nPressione 'M' para mais informações.");
-            Console.ForegroundColor = ConsoleColor.Red;
-            Console.WriteLine("Ou pressione qualquer tecla para voltar.");
-            var input = Console.ReadKey();
-            if (input.Key == ConsoleKey.M) { Adicional(lista); };
+            } 
         }
         public void Adicional(List<Produto> lista)
         {
@@ -78,11 +72,47 @@ namespace EstoqueProjeto
         }
         public void ListandoVendas()
         {
+            Console.Clear();
+            Console.ForegroundColor = ConsoleColor.Yellow;
+            Console.Write("|  ||  ||  ||  ||  | Listando Vendas |  ||  ||  ||  ||  |\n" +
+                          "-------------------------------------------------------------\n");
+            Console.ForegroundColor = ConsoleColor.White;
+            using (var db = new EstoqueEntities())
+            {
+                var query = from c in db.Vendas
+                            select c;
+                foreach (var compra in query)
+                {
+                    Console.WriteLine($"[{compra.VendaId}] | Nome: {compra.NomeVenda} |" +
+                $" Preço: {compra.PrecoVenda} | Produto ID: {compra.VendaId} |");
+                }
+            }
+            Console.ForegroundColor = ConsoleColor.Red;
+            Console.WriteLine("\nPressione qualquer tecla para voltar");
+            Console.ReadKey();
 
         }
         public void ListandoCompras()
         {
+            Console.Clear();
+            Console.ForegroundColor = ConsoleColor.Yellow;
+            Console.Write("|  ||  ||  ||  ||  | Listando Compras |  ||  ||  ||  ||  |\n" +
+                          "-------------------------------------------------------------\n");
+            Console.ForegroundColor = ConsoleColor.White;
+            using (var db = new EstoqueEntities())
+            {
+                var query = from c in db.Compras
+                            select c;
 
+                foreach (var compra in query)
+                {
+                    Console.WriteLine($"[{compra.CompraId}] | Nome: {compra.NomeCompra} |" +
+                $" Preço: {compra.PrecoCompra} | Produto ID: {compra.CompraId} |");
+                }
+            }
+            Console.ForegroundColor = ConsoleColor.Red;
+            Console.WriteLine("\nPressione qualquer tecla para voltar");
+            Console.ReadKey();
         }
         public void ListandoEdicao()
         {
@@ -102,6 +132,17 @@ namespace EstoqueProjeto
                                             $" Preço Compra: {produto.PrecoCompra} | Preço Venda: {produto.PrecoVenda} |");
                 };
             }
+        }
+        public void MaisInformacoes(List<Produto> lista)
+        {
+            Console.ForegroundColor = ConsoleColor.Yellow;
+            Console.WriteLine("\nPressione 'M' para mais informações.");
+            Console.ForegroundColor = ConsoleColor.Red;
+            Console.WriteLine("Ou pressione qualquer tecla para voltar.");
+            var input = Console.ReadKey();
+            if (input.Key == ConsoleKey.M) { Adicional(lista); };
+            
+            
         }
     }
 }

@@ -163,29 +163,26 @@ namespace EstoqueProjeto
                 Console.ReadKey();
             };
         }
+        public void RemoverProduto()
+        {
+            Console.ForegroundColor = ConsoleColor.Yellow;
+            Console.Write("|  ||  ||  ||  ||  | Removendo produtos |  ||  ||  ||  ||  |\n" +
+                          "------------------------------------------------------------\n");
+            listarProduto.Listando(listaProdutos);
+            Console.ForegroundColor = ConsoleColor.Yellow;
+            Console.Write("\nDigite o ID do produto: ");
+            int produtoRemover = Convert.ToInt16(Console.ReadLine());
+            using (var db = new EstoqueEntities())
+            {
+                var p = new Produto { ProdutoId = produtoRemover };
+                db.Produtoes.Attach(p);
+                db.Produtoes.Remove(p);
+                db.SaveChanges();
+            }
+            carregamento.Carregamento("|  ||  ||  | Removendo Produto |  ||  ||  |\n");
+        }
     }
 
 }
-
-//    Console.ForegroundColor = ConsoleColor.White;
-//    Console.Write("Digite o ID do produto: ");
-//    int escolhaUsuario = Convert.ToInt16(Console.ReadLine());
-//    Console.Clear();
-//    Console.ForegroundColor = ConsoleColor.Yellow;
-//    Console.Write("|  ||  ||  ||  ||  | Editando Produto |  ||  ||  ||  ||  |\n" +
-//                  "----------------------------------------------------------\n");
-//    Console.ForegroundColor = ConsoleColor.White;
-//    using (var db = new EstoqueEntities())
-//    {
-//        var query = db.Produtoes.Find(ProdutoId)
-//        Console.WriteLine($"[{escolhaUsuario}] Status: Ativo | Nome: {lista[escolhaUsuario].NomeProduto} | Quantidade: {lista[escolhaUsuario].Quantidade} |" +
-//                $" Preço Compra: {lista[escolhaUsuario].PrecoCompra} | Preço Venda: {lista[escolhaUsuario].PrecoVenda} | Armazenagem: {lista[escolhaUsuario].Armazenagem} | Perca Lucro: {lista[escolhaUsuario].PercaLucro}% |\n");
-//    }
-
-
-//public void CriarCategoria(List<Categoria> lista)
-//{
-
-//}
 
 

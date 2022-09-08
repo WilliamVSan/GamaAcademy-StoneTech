@@ -35,10 +35,11 @@ namespace EstoqueProjeto
                 Console.ResetColor();
                 Console.Write("L - Listar produtos\n" +
                               "A - Adicionar novo produto\n" +
-                              /*"S - Listar compras\n" +
-                              "S - Listar vendas\n" +*/
+                              "C - Listar compras\n" +
+                              "V - Listar vendas\n" +
                               "S - Listar categorias\n" +
-                              "E - Editar produto\n\n");
+                              "E - Editar produto\n" +
+                              "R - Remover produto\n\n");
                 Console.ForegroundColor = ConsoleColor.Red;
                 Console.WriteLine("Pressione 'Q' para sair.\n");
                 Console.ResetColor();
@@ -51,6 +52,7 @@ namespace EstoqueProjeto
                     case ConsoleKey.L:
                         Console.Clear();
                         listarProduto.Listando(listaProdutos);
+                        listarProduto.MaisInformacoes(listaProdutos);
                         break;
 
                     case ConsoleKey.V:
@@ -80,7 +82,13 @@ namespace EstoqueProjeto
                         Console.Clear();
                         adicionar.EditarProduto();
                         break;
-
+                    case ConsoleKey.R:
+                        Console.Clear();
+                        using (var db = new EstoqueEntities())
+                        {
+                            adicionar.RemoverProduto();
+                        }
+                        break;
                     case ConsoleKey.Q:
                         continuar = false;
                         break;
